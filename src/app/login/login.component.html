@@ -1,0 +1,67 @@
+<div style="border-radius: 55px;">
+  <!-- <div *ngIf="message!= 'OKTrue' ">
+    <mat-card class="box">
+      <div class="formGroup">
+        <mat-card-title class="my-grid-tile" style="text-align: center;">
+          <img src="../../assets/logo/crown.png" style="margin-top: -30%;" width="80%">
+          <h1 style="color: #0070b9; margin-top: -15%;">LO<span data-char="G" class="g">G</span> <span
+              style="color:#47c885">IN</span></h1>
+
+        </mat-card-title>
+        <label class="form-label" style="color:#47c885;" for="Username">&nbsp;&nbsp; Username<span
+            style="color: red;">&nbsp;*</span></label>
+        <input type="text" class="form-control" style="border-radius: 20px 20px 20px 20px;" placeholder="Username"
+          #userName required />
+
+        <br>
+      
+        <label class="form-label" style="color:#47c885" for="Username">&nbsp;&nbsp; Password<span
+            style="color: red;">&nbsp;*</span></label>
+        <input type="password" class="form-control" style="border-radius: 20px 20px 20px 20px;" placeholder="Password"
+          #userPassword required />
+        <div class="text-center">
+          <br>
+          <button (click)="senddata(userName.value, userPassword.value)" class="login-btn">Login</button>
+        </div>
+
+      </div>
+
+    </mat-card>
+  </div> -->
+
+  <div *ngIf="message!= 'OKTrue' " style="border-radius: 55px;" >
+    <mat-card class="box" >
+      <div class="formGroup">
+        <mat-card-title  class="my-grid-tile" style="text-align: center;">
+          <img src="../../assets/logo/emailLogo.png" style="margin-top:-18px; margin-bottom: -20px;border-radius: 50%"
+            width="70%">
+          <h3 style="  margin-top: 2px; color:#47c885; font-weight: bold;"> Verify Your Email</h3>
+        </mat-card-title>
+        <mat-card-subtitle style="text-align:center; font-size:11pt;margin-top:-28px;color: #c2c8d3; "> An 6-digit code
+          has been sent to <span
+            style="font-weight:bold; font-family: sans-serif; color:#0070b9">example.123@gmail.com</span>
+
+        </mat-card-subtitle>
+        <br>
+        <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" *ngIf="showOtpComponent"
+          [config]="config"></ng-otp-input>
+        <br>
+        <br>
+        <li style="margin-bottom:8px"> The OTP will expired in </li>
+        <li> Don't recieve the code? <a href="url">Resend </a></li>
+
+
+      </div>
+
+      <div class="d-grid gap-2 col-12 mx-auto" style="margin-top:30px; ">
+        <button (click)="checkcode(ngOtpInput.value)" class="btn " type="button"
+          style="border-radius: 2px;background-color: #3b7fff ; color:white">Verify</button>
+
+      </div>
+    </mat-card>
+  </div>
+
+</div>
+
+
+<router-outlet></router-outlet>

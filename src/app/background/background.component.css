@@ -1,0 +1,91 @@
+.mainsection{
+    background-image: url("../../assets/backgroundimages/slider-design_img.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+/* .container{
+    width: fit-content;
+    block-size: fit-content;
+    padding-bottom: 5%;
+} */
+.container h1{
+    color: #47c885;
+}
+.container h2{
+    color: #0070b9;
+}
+
+
+
+.outerupperdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+}
+
+
+
+.outerdiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    margin-top: 100px;
+/* display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 10px; */
+}
+/* .matcardiv{
+    width: 18%;
+    height: 100%;
+    margin-bottom: 60px;
+    text-align: justify; 
+    
+    
+} */
+
+
+.card-foter{
+    display:flex;
+    text-align: left;
+}
+
+
+.myCard{
+    margin-top: 5%;
+        height: 100%; 
+    display: flex;
+    /* justify-content: center; */
+    align-self: center;
+    align-items: center;
+}
+.example{
+    display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 10px;
+}
+
+.card-pic {
+    overflow: hidden;
+    object-fit:contain;
+    width: 5rem;
+    height: 6rem;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+ 
+  .card-design{
+   display:flex;
+    cursor: pointer; 
+    transition: all .3s;
+  }
+
+  .card-design:hover {
+    transform: scale(0.9);
+  }
+  
